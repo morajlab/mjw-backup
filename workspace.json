@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "dashboard": "packages/dashboard/dashboard",
-    "dashboard-e2e": "packages/dashboard/dashboard-e2e"
+    "dashboard-e2e": "packages/dashboard/dashboard-e2e",
+    "service": "packages/service"
   }
 }

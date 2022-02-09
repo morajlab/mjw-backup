@@ -8,7 +8,10 @@
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "build": "esbuild ./src/app.ts --outdir=dist --bundle --minify",
     "prepare": "mjw hook --install",
-    "create:nextjs": "nx g @nrwl/next:app"
+    "nx:g": "nx g",
+    "cr:nextjs": "npm run nx:g -- @nrwl/next:app",
+    "cr:ts:lib": "npm run nx:g -- @nrwl/js:library --buildable --name",
+    "cr:ts:app": "npm run nx:g -- @nrwl/js:app"
   },
   "repository": {
     "type": "git",
