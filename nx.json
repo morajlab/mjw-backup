@@ -5,7 +5,7 @@
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/next"
   },
   "tasksRunnerOptions": {
     "default": {
@@ -15,5 +15,19 @@
         "accessToken": "NTIwN2JhNDMtYTViNS00ZTg3LWE2NzgtMDc3YjM3ODQzNTlifHJlYWQtd3JpdGU="
       }
     }
-  }
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "dashboard"
 }
