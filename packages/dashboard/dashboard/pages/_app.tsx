@@ -1,18 +1,16 @@
 import { AppProps } from "next/app";
-import Head from "next/head";
+import { Provider as StyletronProvider } from "styletron-react";
+import { DarkTheme, BaseProvider } from "baseui";
+import { styletron } from "../src/styletron";
+
 import "./styles.css";
 
-function CustomApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Welcome to dashboard!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
-}
+export const App = ({ Component, pageProps }: AppProps) => (
+  <StyletronProvider value={styletron}>
+    <BaseProvider theme={DarkTheme}>
+      <Component {...pageProps} />
+    </BaseProvider>
+  </StyletronProvider>
+);
 
-export default CustomApp;
+export default App;
